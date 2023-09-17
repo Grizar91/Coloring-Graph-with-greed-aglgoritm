@@ -24,15 +24,16 @@ def greedy_coloring(graph):
     
     return coloring
     
-Como Usar:
+# Como Usar
 Clone este repositório para o seu ambiente local.
 
 git clone https://github.com/seu-usuario/coloracao-de-grafos.git
 
 Execute o algoritmo guloso com o seu grafo de entrada. Por exemplo:
 
-# Criando um grafo como um dicionário de adjacência
-graph = {
+# Criando um grafo como um dicionário de adjacência:
+
+    graph = {
     'A': ['B', 'C', 'D'],
     'B': ['A', 'C'],
     'C': ['A', 'B', 'D', 'E'],
@@ -43,19 +44,18 @@ graph = {
     'H': ['E'],
     'I': ['F'],
     'J': ['F']
-}
+    }
 
 # Executando o algoritmo de coloração
-coloring = greedy_coloring(graph)
+    coloring = greedy_coloring(graph)
 
 # Mapeamento de vértices para cores
-vertex_colors = {vertex: chr(65 + coloring[vertex]) for vertex in coloring}
-
-print("Mapeamento de vértices para cores:")
-for vertex, color in vertex_colors.items():
+    vertex_colors = {vertex: chr(65 + coloring[vertex]) for vertex in coloring}
+    print("Mapeamento de vértices para cores:")
+    for vertex, color in vertex_colors.items():
     print(f"Vértice {vertex} -> Cor {color}")
 
-Contribuição
-Sinta-se à vontade para contribuir com melhorias ou correções para este projeto. Abra uma issue ou envie uma solicitação de pull.    
+#Contribuição
+    Sinta-se à vontade para contribuir com melhorias ou correções para este projeto. Abra uma issue ou envie uma solicitação de pull.    
 
     
