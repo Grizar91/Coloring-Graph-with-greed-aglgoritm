@@ -6,3 +6,26 @@ O problema de coloração de grafos envolve atribuir cores a vértices de um gra
 
 Algoritmo Guloso
 Aqui está um exemplo de um algoritmo guloso em Python para resolver o problema de coloração de grafos:
+
+def greedy_coloring(graph):
+    coloring = {}
+    
+    for vertex in graph:
+        available_colors = set(range(len(graph)))
+        
+        for neighbor in graph[vertex]:
+            if neighbor in coloring:
+                color = coloring[neighbor]
+                if color in available_colors:
+                    available_colors.remove(color)
+        
+        min_color = min(available_colors)
+        coloring[vertex] = min_color
+    
+    return coloring
+    
+Como Usar:
+Clone este repositório para o seu ambiente local.
+
+
+    
